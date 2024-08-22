@@ -1,0 +1,18 @@
+type Student{
+rollnum:ID!,
+name :String!,
+branch:String!,
+percentage:Float!
+}
+
+type Query{
+   getAllStudents :[Student]
+   getA_Student(rollnum:ID):Student
+   getStudentByBranch(branch:String):[Student]
+}
+
+type Mutation{
+	 updateStudentPercentage(rollnum:ID,percentage:Float):Student
+	 addStudent(name:String,branch:String,percentage:Float):Student
+	  deleteId(rollnum:ID): Boolean
+}
